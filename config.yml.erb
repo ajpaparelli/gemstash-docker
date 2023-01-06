@@ -2,8 +2,8 @@
 :base_path: "/var/lib/gemstash"
 :protected_fetch: false # do not protect private gems
 <% if ENV['DB_HOST'] %>
-:db_adapter: mysql2
-:db_url: "mysql2://<%= ENV["DB_USER"] %>:<%= ENV["DB_PASSWORD"] %>@<%= ENV["DB_HOST"] %>/<%= ENV["DB_NAME"] %>"
+:db_adapter: postgres
+:db_url: "postgres://<%= ENV["DB_USER"] %>:<%= ENV["DB_PASSWORD"] %>@<%= ENV["DB_HOST"] %>/<%= ENV["DB_NAME"] %>"
 :db_connection_options:
   :connect_timeout: 10
   :read_timeout: 5
