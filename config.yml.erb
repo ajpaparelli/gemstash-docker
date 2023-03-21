@@ -1,6 +1,7 @@
 ---
 :base_path: "/var/lib/gemstash"
 :protected_fetch: false # do not protect private gems
+:rubygems_url: <%= ENV["GEMSTASH_URL"] %>
 <% if ENV['DB_HOST'] %>
 :db_adapter: postgres
 :db_url: "postgres://<%= ENV["DB_USER"] %>:<%= ENV["DB_PASSWORD"] %>@<%= ENV["DB_HOST"] %>/<%= ENV["DB_NAME"] %>"
